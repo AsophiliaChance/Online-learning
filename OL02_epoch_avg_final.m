@@ -12,7 +12,7 @@ savedir='D:\online_learning\equiprobability_EEG\results';
 eeglab;
 close(gcf);
 %%
-for md=1:2% md1µÄ25(OL27)ÓĞÎÊÌâmd2µÄ25(OL27)30(OL33)ÓĞÎÊÌâ
+for md=1:2% md1çš„25(OL27)æœ‰é—®é¢˜md2çš„25(OL27)30(OL33)æœ‰é—®é¢˜
     cd(basedir{md});
     outputdir = basedir{md};
     files = dir(filt);
@@ -26,7 +26,7 @@ for md=1:2% md1µÄ25(OL27)ÓĞÎÊÌâmd2µÄ25(OL27)30(OL33)ÓĞÎÊÌâ
         
         nam = nam(1:8);
         fprintf('Working on %s\n',[nam ext]);
-        %% ÖØ²Î¿¼
+        %% é‡å‚è€ƒ
         %EEG=pop_chanedit(EEG, 'append',1,'changefield',{2,'labels',''},'insert',2,'insert',2,'delete',2,'delete',2,'delete',2,'insert',2,'changefield',{2,'labels','Cz'},'lookup','S:\\Program\\matlab2019toolbox\\eeglab_current\\eeglab2024.0\\plugins\\dipfit\\standard_BESA\\GSN-HydroCel-129.sfp');
         EEG=pop_chanedit(EEG, 'lookup','S:\\Program\\matlab2019toolbox\\eeglab_current\\eeglab2024.0\\plugins\\dipfit\\standard_BESA\\GSN-HydroCel-129.sfp');
         EEG = pop_reref(EEG, [57 100]); 
