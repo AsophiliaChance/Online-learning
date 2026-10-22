@@ -88,3 +88,37 @@ The scripts use the original absolute paths, for example `D:\online_learning\...
 | `s28_plot_figure2.py` | Figure 2: production and alpha bar charts combined with the scalp map from `s10`. It reads the outputs of `s07`, `s08`, `s10`, `s18` and `s20` |
 
 Figure 1 (the experimental procedure) is a schematic drawing and has no script.
+
+# Experiment materials: online vs offline Mandarin tone learning
+
+This folder holds the PsychoPy experiment files and the stimulus materials used in the study. It contains no participant data.
+
+The experiments were built with PsychoPy 2022.2.4. Every file sits in `psychopy_experiment/` with its original name, because the experiment files refer to stimuli by relative path.
+
+## Experiment files
+
+Each `.psyexp` file is the PsychoPy Builder source. The matching `_lastrun.py` file is the Python script PsychoPy generated from it.
+
+| File | Session part | Condition file used |
+|---|---|---|
+| `301_resting_state` | Eyes-open/eyes-closed resting state and tone instruction | none |
+| `302_1_pretest1` | Pre-test, part 1: attentive listening (Supplementary S3) | `ERPstimuli.xlsx` |
+| `302_2_pretest2` | Pre-test, part 2: tone instruction, tone identification and tone production tests | `audio.xlsx`, `loopTemplate1.xlsx` |
+| `303_tutor` | Listen-and-repeat training with the tutor, with interim production tests | `tutorpinyin.xlsx`, `loopTemplate1.xlsx` |
+| `304_1_post_test1` | Post-test, part 1: attentive listening | `ERPstimuli.xlsx` |
+| `304_2_post_test2` | Post-test, part 2: tone identification and tone production tests | `audio.xlsx`, `loopTemplate1.xlsx` |
+
+## Stimulus and condition files
+
+| File | Content |
+|---|---|
+| `tutorpinyin.xlsx` | The 63 training syllables (pinyin with tone marks) that the tutor produced in the listen-and-repeat training |
+| `loopTemplate1.xlsx` | Items for the tone production tests (`TEST_LIST`) |
+| `audio.xlsx` | The 72 tone identification trials: audio file and correct response (1 = rising, 2 = falling-rising, 3 = falling) |
+| `audio_clip/` | The 72 identification stimuli: 6 syllables × 3 tones × 4 speakers. File names follow `syllable + tone (_speaker).wav`, e.g. `bo3_2.wav` |
+| `ERPstimuli.xlsx`, `a1.wav`–`a11.wav` | Attentive-listening sequence (stimulus order, ISI, EEG trigger codes) and its sound files |
+| `11.png`–`19.png`, `Tone_information_audio.wav` | Tone instruction slides (in Finnish) and their narration |
+| `eye_open.wav`, `eye_closed.wav`, `pre_pretest.wav`, `question1–4.wav`, `test1.wav`, `test3.wav`, `after_pretest.wav`, `ready.wav`, `Sametest.wav`, `interactive.wav`, `non_interactive.wav` | Spoken task instructions (in Finnish) |
+
+The tutor training itself was delivered live over video, so there are no pre-recorded training videos.
+
